@@ -12,7 +12,7 @@
 
             $result = $connection->query($sql);
 
-                if($result!=true){
+                if($result==true){
                     echo "<script>alert('Cadastro realizado com sucesso!');</script>";
                     echo "<script>location.href='?page=listar';</script>";
                 }

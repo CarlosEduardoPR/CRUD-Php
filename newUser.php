@@ -6,7 +6,7 @@
    <input type='hidden' name='acao' value='cadastrar'>
 <div class='form-group'>
     <label for='exampleFormControlInput1'>Nome</label>
-    <input type='text' class='form-control' name='nome' id='exampleFormControlInput1' placeholder='Digite Seu Nome'>
+    <input type='text' required='required' class='form-control' name='nome' id='exampleFormControlInput1' placeholder='Digite Seu Nome'>
   </div>
   <div class='form-group'>
     <label for='exampleFormControlInput1'>Email</label>
@@ -18,7 +18,7 @@
   </div>
   <div class='form-group'>
     <label for='exampleFormControlInput1'>Data de Nascimento</label>
-    <input type='date' class='form-control' id='exampleFormControlInput1' name='data_nasc'>
+    <input type='date' required='required' class='form-control' id='exampleFormControlInput1' min="1923-04-01" max="2005-02-28" name='data_nasc'>
   </div>
   <button type='submit' class='btn btn-primary'>Enviar</button>
 
