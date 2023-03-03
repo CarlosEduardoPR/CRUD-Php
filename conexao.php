@@ -1,6 +1,6 @@
 <?php
 
-//Codigo para conexao com mySql
+//Conexao com mySql
     $host = "localhost";
     $user = "apesp";
     $pass = "4P35P@gov";

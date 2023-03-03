@@ -1,6 +1,6 @@
-<!--Codigo da page de novo usuario, que liga cada input no arquivo salvarUser -->
+<!--Page de novo usuario, que liga cada input no arquivo salvarUser por meio do 'action' do form-->
 
-   <h1>Novo Usuario</h1>
+   <h1>Novo Usuário</h1>
    
    <form action='?page=salvar' method='POST'>
    <input type='hidden' name='acao' value='cadastrar'>

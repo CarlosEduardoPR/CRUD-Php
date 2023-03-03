@@ -15,23 +15,20 @@
 
     <!-- Barra de navegação Por Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="main.php">Cadastro</a>
+        <a class="navbar-brand" href="main.php">Site.com</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" aria-current="page" href="main.php">Home <span class="sr-only">(Página atual)</span></a>
+                    <a class="nav-link" aria-current="page" href="main.php">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="?page=novo">Novo Usuario</a>
+                    <a class="nav-link" href="?page=novo">Novo Usuário</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="?page=listar">Lista de Usuários</a>
-                </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="?page=editar">Editar Usuário</a>
                 </li>
             </ul>
         </div>
@@ -41,11 +38,11 @@
         <div classs="row">
             <div class="col mt-5">
 
-                <!-- Ligaçao da navbar aos outros arquivos-->
+                <!-- Ligaçao da navbar aos outros arquivos, por meio do REQUEST-->
                 <?php
                 include("conexao.php");
 
-                switch (@$_GET["page"]) {
+                switch (@$_REQUEST["page"]) {
                     case "novo":
                         include("newUser.php");
                         break;

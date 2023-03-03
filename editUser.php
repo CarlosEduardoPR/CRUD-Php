@@ -6,20 +6,12 @@ $sql = "SELECT * FROM usuarios WHERE id=".$_REQUEST["id"];
 $result = $connection->query($sql);
 $row = $result->fetch_object();
 
-if($result==true){
-    echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-    echo "<script>location.href='?page=listar';</script>";
-}
-else{
-    echo "<script>alert('Tente Novamente')</script>";
-}
-echo "<script>location.href='?page=novo';</script>";
-
-
+//Mostra as informacoes anteriormente salvas do usuario no formulario de ediçao. Por meio do "echo->'...'" ela é feita e redireciona todos os dados pelo metodo POST para a pagina salvarUser, por meio do 'action' do form
 ?>
 
    <form action='?page=salvar' method='POST'>
-   <input type='hidden' name='acao' value='cadastrar'>
+   <input type='hidden' name='acao' value='editar'>
+   <input type='hidden' name='id' value="<?php echo $row->id;?>">
 <div class='form-group'>
     <label for='exampleFormControlInput1'>Nome</label>
     <input type='text' required='required' class='form-control' name='nome' id='exampleFormControlInput1' value="<?php echo $row->nome?>">
@@ -30,7 +22,7 @@ echo "<script>location.href='?page=novo';</script>";
   </div>
   <div class='form-group'>
     <label for='exampleFormControlInput1'>Senha</label>
-    <input type='password' class='form-control' name='senha'id='exampleFormControlInput1' value="<?php echo $row->senha?>">
+    <input type='password' class='form-control' name='senha' id='exampleFormControlInput1' value="<?php $row->senha?>">
   </div>
   <div class='form-group'>
     <label for='exampleFormControlInput1'>Data de Nascimento</label>
